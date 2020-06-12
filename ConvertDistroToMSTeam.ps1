@@ -19,6 +19,8 @@ $memberlist | out-file -FilePath C:\scripts\users.txt
 $x = Get-Content C:\scripts\users.txt
 $emailList = ($x | append-text)
 $emaillist = $emailList -replace '\s', ''
+
+#GridView to verify members
 $emailList | Out-GridView
 
 
